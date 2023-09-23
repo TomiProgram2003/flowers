@@ -1,0 +1,116 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #1d1d1d;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: #fff; */
+}
+
+.flower {
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+.flower .center {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: -webkit-radial-gradient(center, circle, #100, #3F1816 50%);
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.flower .petal {
+	width: 80px;
+	height: 80px;
+  display: block;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0) rotate(135deg);
+	background: linear-gradient(to top, #D15B01, #FDC300, #FDC300);
+	border-top-right-radius: 150%;
+  border-top-left-radius: 40%;
+  border-bottom-left-radius: 150%;
+  border-bottom-right-radius: 15%;
+  z-index: var(--Z);
+}
+
+.petal:nth-of-type(1){
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.petal:nth-of-type(2){
+  top: 25%;
+	left: 75%;
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.petal:nth-of-type(3){
+  top: 50%;
+	left: 100%;
+	transform: translate(-100%, -50%) rotate(135deg);
+}
+
+.petal:nth-of-type(4){
+  top: 75%;
+	left: 75%;
+	transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.petal:nth-of-type(5){
+  top: 100%;
+	left: 50%;
+	transform: translate(-50%, -100%) rotate(225deg);
+}
+
+.petal:nth-of-type(6){
+  top: 75%;
+	left: 25%;
+	transform: translate(-50%, -50%) rotate(270deg);
+}
+
+.petal:nth-of-type(7){
+  top: 50%;
+	left: 0;
+	transform: translate(0, -50%) rotate(315deg);
+}
+
+.petal:nth-of-type(8){
+  top: 25%;
+	left: 25%;
+	transform: translate(-50%, -50%) rotate(360deg);
+}
+
+@keyframes spin {
+  from {
+    rotate: 0turn;
+  }
+  to {
+    rotate: 1turn;
+  }
+}
